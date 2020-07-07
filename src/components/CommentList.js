@@ -1,9 +1,9 @@
 import React from "react";
 import Comment from "./Comment";
 
-const CommentList = (props) => {
+const CommentList = ({comments}) => {
 
-  const commentNodes = props.comments.map(comment => {
+  const commentNodes = comments.map(comment => {
     return (
       <Comment author={comment.author} key={comment.id}>
         {comment.text}
